@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Petra ICT Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-white fw-bold">Petra</span> <span class="text-secondary">ICT Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-primary" href="index.html#register">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .hero-carousel {
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .hero-carousel .carousel-item {
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        .hero-carousel .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero-carousel .carousel-caption {
+            bottom: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-carousel .btn {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-carousel .carousel-item {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .hero-carousel h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-carousel .lead {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+    <!-- Page Header -->
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div id="graduationCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 - Graduation Ceremony -->
+                <div class="carousel-item active">
+                    <img src="/images/3.jpg"
+                        class="d-block w-100" alt="Graduation ceremony">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Our Comprehensive Courses</h1>
+                                    <p class="lead mb-3">Join 500+ students who transformed their careers with us</p>
+                                    <a href="#register" class="btn btn-primary btn-lg">Start Your Journey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Student Success -->
+                <div class="carousel-item">
+                    <img src="/images/4.jpg"
+                        class="d-block w-100" alt="Students celebrating success">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Industry-Recognized Training</h1>
+                                    <p class="lead mb-3">92% of our graduates report career advancement within 6 months
+                                    </p>
+                                    <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - Alumni Testimonial -->
+                <div class="carousel-item">
+                    <img src="/images/1.jpg"
+                        class="d-block w-100" alt="Alumni working in tech">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Proven Success Stories</h1>
+                                    <p class="lead mb-3">Our graduates now work at top companies nationwide</p>
+                                    <a href="#testimonials" class="btn btn-primary btn-lg">Hear Their Stories</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#graduationCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#graduationCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- Course Categories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="subtitle">Learning Paths</span>
+                <h2 class="fw-bold">Explore By <span class="text-primary">Category</span></h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="#programming" class="category-card card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body text-center p-4">
+                            <div
+                                class="category-icon bg-primary bg-opacity-10 text-light rounded-circle mx-auto p-4 mb-4">
+                                <i class="fas fa-code fa-2x"></i>
+                            </div>
+                            <h5 class="mb-0">Programming</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="#design" class="category-card card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body text-center p-4">
+                            <div
+                                class="category-icon bg-primary bg-opacity-10 text-light rounded-circle mx-auto p-4 mb-4">
+                                <i class="fas fa-paint-brush fa-2x"></i>
+                            </div>
+                            <h5 class="mb-0">Design</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="#media" class="category-card card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body text-center p-4">
+                            <div
+                                class="category-icon bg-primary bg-opacity-10 text-light rounded-circle mx-auto p-4 mb-4">
+                                <i class="fas fa-camera fa-2x"></i>
+                            </div>
+                            <h5 class="mb-0">Media Production</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="#business" class="category-card card border-0 shadow-sm text-decoration-none h-100">
+                        <div class="card-body text-center p-4">
+                            <div
+                                class="category-icon bg-primary bg-opacity-10 text-light rounded-circle mx-auto p-4 mb-4">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                            </div>
+                            <h5 class="mb-0">Business Tech</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Courses -->
+    <section id="programming" class="py-5">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="fw-bold"><i class="fas fa-code me-2 text-primary"></i> Programming <span
+                        class="text-primary">Courses</span></h2>
+                <p class="text-muted">Learn to build websites, apps, and software solutions</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Web Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Web Development">
+                            <span class="badge duration-badge">8 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text text-muted">Master front-end and back-end web technologies to build
+                                modern websites and web applications.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> HTML5, CSS3, JavaScript</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> React.js Framework</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Node.js & Express</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> MongoDB Database</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦45,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Mobile App Development">
+                            <span class="badge duration-badge">10 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text text-muted">Build cross-platform mobile applications using modern
+                                frameworks and tools.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> React Native Framework</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Flutter Development</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Firebase Integration</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> App Store Deployment</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦55,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python Programming -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Python Programming">
+                            <span class="badge duration-badge">6 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Python Programming</h5>
+                            <p class="card-text text-muted">Learn Python from basics to advanced concepts for web
+                                development, data analysis, and automation.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Python Fundamentals</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Django Web Framework</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Data Analysis with Pandas</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Automation Scripting</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦40,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Courses -->
+    <section id="design" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="fw-bold"><i class="fas fa-paint-brush me-2 text-primary"></i> Design <span
+                        class="text-primary">Courses</span></h2>
+                <p class="text-muted">Master visual communication and digital design</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Graphics Design -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/1109535/pexels-photo-1109535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Graphics Design">
+                            <span class="badge duration-badge">6 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Graphics Design</h5>
+                            <p class="card-text text-muted">Professional training in visual communication using
+                                industry-standard tools.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Adobe Photoshop</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Adobe Illustrator</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> CorelDraw</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Design Principles</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦35,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="UI/UX Design">
+                            <span class="badge duration-badge">8 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX Design</h5>
+                            <p class="card-text text-muted">Create intuitive and beautiful user interfaces for websites
+                                and applications.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Figma & Adobe XD</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> User Research</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Wireframing & Prototyping</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Usability Testing</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦45,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motion Graphics -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Motion Graphics">
+                            <span class="badge duration-badge">5 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Motion Graphics</h5>
+                            <p class="card-text text-muted">Learn to create engaging animations and visual effects for
+                                videos and presentations.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Adobe After Effects</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Animation Principles</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Kinetic Typography</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Video Compositing</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦38,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Production Courses -->
+    <section id="media" class="py-5">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="fw-bold"><i class="fas fa-camera me-2 text-primary"></i> Media Production <span
+                        class="text-primary">Courses</span></h2>
+                <p class="text-muted">Professional training in photography, videography, and editing</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Photography -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Photography">
+                            <span class="badge duration-badge">4 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Photography</h5>
+                            <p class="card-text text-muted">Master your DSLR camera and learn professional photography
+                                techniques.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Camera Operation</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Lighting Techniques</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Composition Rules</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Photo Editing</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦30,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Videography -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Videography">
+                            <span class="badge duration-badge">6 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Videography & Editing</h5>
+                            <p class="card-text text-muted">Learn professional video production from shooting to final
+                                editing.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Camera Techniques</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Adobe Premiere Pro</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Color Grading</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Audio Enhancement</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦42,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Content -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/4050291/pexels-photo-4050291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Social Media Content">
+                            <span class="badge duration-badge">4 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Content Creation</h5>
+                            <p class="card-text text-muted">Create engaging content optimized for various social media
+                                platforms.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Content Strategy</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Short-form Video</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Canva Design</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Analytics & Optimization</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦28,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Tech Courses -->
+    <section id="business" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="fw-bold"><i class="fas fa-chart-line me-2 text-primary"></i> Business Tech <span
+                        class="text-primary">Courses</span></h2>
+                <p class="text-muted">Digital skills for business growth and productivity</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Digital Marketing -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Digital Marketing">
+                            <span class="badge duration-badge">5 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text text-muted">Learn to promote businesses online through various digital
+                                channels.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Social Media Marketing</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> SEO & Content Marketing</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Email Marketing</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Google Ads</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦35,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Productivity -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Office Productivity">
+                            <span class="badge duration-badge">3 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Office Productivity</h5>
+                            <p class="card-text text-muted">Master Microsoft Office suite for professional workplace
+                                efficiency.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Word Document Processing</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Excel Data Analysis</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> PowerPoint Presentations</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Outlook Email Management</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦25,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card course-card h-100 border-0 shadow-sm">
+                        <div class="course-img">
+                            <img src="https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="card-img-top" alt="Data Analysis">
+                            <span class="badge duration-badge">6 Weeks</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analysis</h5>
+                            <p class="card-text text-muted">Learn to collect, analyze, and visualize data for business
+                                decisions.</p>
+                            <ul class="list-unstyled course-features">
+                                <li><i class="fas fa-check text-primary me-2"></i> Excel Advanced Functions</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Power BI Visualization</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Data Cleaning Techniques</li>
+                                <li><i class="fas fa-check text-primary me-2"></i> Business Reporting</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₦40,000</span>
+                                <a href="index.html#register" class="btn btn-sm btn-primary">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3">Ready to start your learning journey?</h3>
+                    <p class="mb-0">Join hundreds of students who have transformed their careers with our courses.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="index.html#register" class="btn btn-light btn-lg px-4">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4" style="color: #defeab;">Petra ICT Hub</h4>
+                    <p>Empowering individuals and businesses with quality ICT training and services to thrive in the
+                        digital age.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4" style="color: #defeab;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="courses.html" class="text-white text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="index.html#services"
+                                class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="index.html#about" class="text-white text-decoration-none">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="index.html#contact"
+                                class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4" style="color: #defeab;">Our Courses</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#programming" class="text-white text-decoration-none">Programming</a>
+                        </li>
+                        <li class="mb-2"><a href="#design" class="text-white text-decoration-none">Design</a></li>
+                        <li class="mb-2"><a href="#media" class="text-white text-decoration-none">Media Production</a>
+                        </li>
+                        <li class="mb-2"><a href="#business" class="text-white text-decoration-none">Business Tech</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="mb-4" style="color: #defeab;">Newsletter</h5>
+                    <p>Subscribe to get updates on new courses and offers.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit"
+                                style="background-color: #105341; border-color: #105341;">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Petra ICT Hub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart" style="color: #defeab;"></i> by Petra ICT Team
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" id="backToTop"
+        style="background-color: #105341; border-color: #105341;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
