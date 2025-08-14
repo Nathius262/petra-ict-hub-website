@@ -14,7 +14,12 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
@@ -314,7 +319,8 @@ footer {
     background-color: #0c4134;
 }
 
-footer h4, footer h5 {
+footer h4,
+footer h5 {
     color: var(--secondary);
 }
 
@@ -372,7 +378,7 @@ footer a:hover {
     .hero-section h1 {
         font-size: 2.3rem;
     }
-    
+
     .section-header h2 {
         font-size: 1.8rem;
     }
@@ -383,15 +389,15 @@ footer a:hover {
         padding: 120px 0 80px;
         text-align: center;
     }
-    
+
     .hero-section .d-flex {
         justify-content: center;
     }
-    
+
     .section-header {
         text-align: center;
     }
-    
+
     .hero-section h1 {
         font-size: 2rem;
     }
@@ -401,9 +407,54 @@ footer a:hover {
     .hero-section h1 {
         font-size: 1.8rem;
     }
-    
+
     .btn {
         padding: 8px 16px;
         font-size: 0.9rem;
+    }
+}
+
+.hero-carousel {
+    position: relative;
+    margin-top: 60px;
+}
+
+.hero-carousel .carousel-item {
+    height: 70vh;
+    min-height: 500px;
+}
+
+.hero-carousel .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-carousel .carousel-caption {
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-carousel .btn {
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .hero-carousel .carousel-item {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-carousel h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-carousel .lead {
+        font-size: 1.1rem;
     }
 }
