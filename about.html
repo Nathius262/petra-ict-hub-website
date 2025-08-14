@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Petra ICT Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-white fw-bold">Petra</span> <span class="text-secondary">ICT Hub</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn btn-primary" href="index.html#register">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div id="graduationCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#graduationCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 - Graduation Ceremony -->
+                <div class="carousel-item active">
+                    <img src="/images/3.jpg"
+                        class="d-block w-100" alt="Graduation ceremony">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Our Comprehensive Courses</h1>
+                                    <p class="lead mb-3">Join 500+ students who transformed their careers with us</p>
+                                    <a href="#register" class="btn btn-primary btn-lg">Start Your Journey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Student Success -->
+                <div class="carousel-item">
+                    <img src="/images/4.jpg"
+                        class="d-block w-100" alt="Students celebrating success">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Industry-Recognized Training</h1>
+                                    <p class="lead mb-3">92% of our graduates report career advancement within 6 months
+                                    </p>
+                                    <a href="#courses" class="btn btn-primary btn-lg">Explore Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - Alumni Testimonial -->
+                <div class="carousel-item">
+                    <img src="/images/1.jpg"
+                        class="d-block w-100" alt="Alumni working in tech">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto text-center bg-dark bg-opacity-75 p-4 rounded">
+                                    <h1 class="display-4 fw-bold mb-3">Proven Success Stories</h1>
+                                    <p class="lead mb-3">Our graduates now work at top companies nationwide</p>
+                                    <a href="#testimonials" class="btn btn-primary btn-lg">Hear Their Stories</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#graduationCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#graduationCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Our History -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Our humble beginnings" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header mb-4">
+                        <span class="subtitle">Our Journey</span>
+                        <h2 class="fw-bold">From Humble <span class="text-primary">Beginnings</span></h2>
+                    </div>
+                    <p>Founded in 2015 with just 2 computers in a small office, Petra ICT Hub has grown to become Benue's leading digital skills training center. What began as a passion project to bridge the digital divide has transformed into a thriving community hub.</p>
+                    <div class="timeline mt-4">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015</div>
+                            <div class="timeline-content">
+                                <h5>Founded in Makurdi</h5>
+                                <p>Started with basic computer literacy classes for 12 students</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-content">
+                                <h5>Expanded Course Offerings</h5>
+                                <p>Added programming and design courses in response to demand</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-content">
+                                <h5>New Facility Opened</h5>
+                                <p>Moved to our current location with 30 workstations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h5>1000+ Graduates</h5>
+                                <p>Celebrated our 1000th graduate with industry partnerships</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="subtitle">Our Core</span>
+                <h2 class="fw-bold">Mission & <span class="text-primary">Values</span></h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-light px-1 py-3 rounded-5  mb-4">
+                                <i class="fas fa-bullseye fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Our Mission</h5>
+                            <p class="mb-0">To democratize digital skills education and create economic opportunities through practical, affordable training.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-light px-1 py-3 rounded-5  mb-4">
+                                <i class="fas fa-eye fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Our Vision</h5>
+                            <p class="mb-0">To be West Africa's most impactful community-based digital skills accelerator by 2030.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-light px-1 py-3 rounded-5  mb-4">
+                                <i class="fas fa-hand-holding-heart fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Our Values</h5>
+                            <p class="mb-0">Accessibility, Excellence, Community, Innovation, and Empowerment guide everything we do.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary bg-opacity-10 text-light px-1 py-3 rounded-5  mb-4">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Our Impact</h5>
+                            <p class="mb-0">92% job placement rate for graduates, with 45% starting their own tech businesses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="subtitle">Meet The Team</span>
+                <h2 class="fw-bold">Our <span class="text-primary">Instructors</span></h2>
+                <p class="text-muted">Passionate professionals dedicated to your success</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card team-card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="John Doe">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">John Doe</h5>
+                            <p class="text-muted mb-3">Lead Programming Instructor</p>
+                            <p class="card-text">10+ years experience in software development. Former lead developer at TechSolutions Inc.</p>
+                            <div class="social-links mt-3">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card team-card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" class="card-img-top" alt="Jane Smith">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Jane Smith</h5>
+                            <p class="text-muted mb-3">Graphics Design Lead</p>
+                            <p class="card-text">Award-winning designer with expertise in branding and visual communication systems.</p>
+                            <div class="social-links mt-3">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card team-card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Amina Yusuf">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">Amina Yusuf</h5>
+                            <p class="text-muted mb-3">Media Production</p>
+                            <p class="card-text">Professional photographer and videographer with National Geographic credits.</p>
+                            <div class="social-links mt-3">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card team-card border-0 shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=712&q=80" class="card-img-top" alt="David Okafor">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-1">David Okafor</h5>
+                            <p class="text-muted mb-3">Business Technology</p>
+                            <p class="card-text">Digital marketing strategist who has helped scale 50+ Nigerian businesses online.</p>
+                            <div class="social-links mt-3">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3">Ready to join our next class?</h3>
+                    <p class="mb-0">Applications for our January intake are now open. Limited seats available.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="index.html#register" class="btn btn-light btn-lg px-4">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <!-- ... (same footer as index.html) ... -->
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-primary back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
