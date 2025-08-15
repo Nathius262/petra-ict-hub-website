@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Petra ICT Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/student-dashboard.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header text-center">
+            <h4>Petra ICT Hub</h4>
+            <p class="mb-0 text-light">Student Dashboard</p>
+        </div>
+        <div class="text-center py-3">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                 alt="Student" class="rounded-circle profile-img border border-3 border-white">
+            <h5 class="mt-3 mb-0">John Doe</h5>
+            <small class="text-light ">Programming Student</small>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+            <li><a href="#"><i class="fas fa-tasks"></i> Assignments</a></li>
+            <li><a href="#"><i class="fas fa-file-certificate"></i> Certificates</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+            <li><a href="#"><i class="fas fa-comments"></i> Messages <span class="badge bg-danger notification-badge">3</span></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Top Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded mb-4">
+            <div class="container-fluid">
+                <button class="btn btn-primary me-2 d-lg-none" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="d-flex align-items-center">
+                    <h5 class="mb-0 text-light">Dashboard</h5>
+                </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-light" type="button" id="notificationDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">New assignment posted</a></li>
+                            <li><a class="dropdown-item" href="#">Course update available</a></li>
+                            <li><a class="dropdown-item" href="#">Upcoming class reminder</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-primary" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-decoration-none" id="userDropdown" data-bs-toggle="dropdown">
+                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="User" width="40" height="40" class="rounded-circle me-2">
+                            
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="container-fluid">
+
+            
+
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-book card-icon"></i>
+                            <h5 class="card-title">Enrolled Courses</h5>
+                            <h2 class="mb-3">3</h2>
+                            <a href="#" class="text-white">View All <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-success text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-check-circle card-icon"></i>
+                            <h5 class="card-title">Completed</h5>
+                            <h2 class="mb-3">1</h2>
+                            <a href="#" class="text-white">View Certificates <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-warning text-dark">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tasks card-icon"></i>
+                            <h5 class="card-title">Assignments</h5>
+                            <h2 class="mb-3">5</h2>
+                            <a href="#" class="text-dark">View Pending <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-info text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-calendar-alt card-icon"></i>
+                            <h5 class="card-title">Upcoming Classes</h5>
+                            <h2 class="mb-3">2</h2>
+                            <a href="#" class="text-white">View Schedule <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Assignments & Progress Chart -->
+            <div class="row g-4 mt-4">
+
+                <!-- Progress Chart -->
+                <div class="col-lg-12">
+                    <div class="card dashboard-card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">My Progress</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="progressChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Assignments -->
+                <div class="col-lg-12">
+                    <div class="card dashboard-card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Recent Assignments</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Assignment</th>
+                                            <th>Course</th>
+                                            <th>Due Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>JavaScript Exercises</td>
+                                            <td>Programming</td>
+                                            <td>Jul 28, 2023</td>
+                                            <td><span class="badge bg-warning">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Logo Design Project</td>
+                                            <td>Graphics Design</td>
+                                            <td>Jul 25, 2023</td>
+                                            <td><span class="badge bg-success">Submitted</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Portrait Photography</td>
+                                            <td>Photography</td>
+                                            <td>Aug 2, 2023</td>
+                                            <td><span class="badge bg-warning">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CSS Styling Challenge</td>
+                                            <td>Programming</td>
+                                            <td>Jul 20, 2023</td>
+                                            <td><span class="badge bg-info">Graded (85%)</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+            <!-- Current Courses -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card dashboard-card">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">My Courses</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Instructor</th>
+                                            <th>Start Date</th>
+                                            <th>Progress</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                                         alt="Course" width="60" class="rounded me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Programming Fundamentals</h6>
+                                                        <small class="text-muted">8 Weeks</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Mr. James Okafor</td>
+                                            <td>15 Jun, 2023</td>
+                                            <td>
+                                                <div class="progress course-progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%"></div>
+                                                </div>
+                                                <small>65% Complete</small>
+                                            </td>
+                                            <td><span class="badge bg-primary">In Progress</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">Continue</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.pexels.com/photos/1109535/pexels-photo-1109535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                                         alt="Course" width="60" class="rounded me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Graphics Design</h6>
+                                                        <small class="text-muted">6 Weeks</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Ms. Amina Yusuf</td>
+                                            <td>10 May, 2023</td>
+                                            <td>
+                                                <div class="progress course-progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+                                                </div>
+                                                <small>100% Complete</small>
+                                            </td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-success">View Certificate</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                                         alt="Course" width="60" class="rounded me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Photography Basics</h6>
+                                                        <small class="text-muted">4 Weeks</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Mr. David Mark</td>
+                                            <td>5 Jul, 2023</td>
+                                            <td>
+                                                <div class="progress course-progress">
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"></div>
+                                                </div>
+                                                <small>30% Complete</small>
+                                            </td>
+                                            <td><span class="badge bg-primary">In Progress</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">Continue</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Classes & Recent Announcements -->
+            <div class="row g-4">
+                <!-- Upcoming Classes -->
+                <div class="col-lg-6">
+                    <div class="card dashboard-card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Upcoming Classes</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 class="mb-1">Programming Fundamentals</h6>
+                                            <small class="text-muted">Web Development Module</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Tomorrow</small>
+                                            <div class="fw-bold">10:00 AM - 12:00 PM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 class="mb-1">Photography Basics</h6>
+                                            <small class="text-muted">Outdoor Practical Session</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Fri, Jul 28</small>
+                                            <div class="fw-bold">2:00 PM - 4:00 PM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm rounded">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 class="mb-1">Graphics Design</h6>
+                                            <small class="text-muted">Adobe Illustrator Workshop</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Mon, Jul 31</small>
+                                            <div class="fw-bold">9:00 AM - 11:00 AM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Announcements -->
+                <div class="col-lg-6">
+                    <div class="card dashboard-card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Recent Announcements</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                                 alt="Instructor" width="40" height="40" class="rounded-circle me-3">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">New Assignment Posted</h6>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Complete the JavaScript exercises by Friday...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                                                 alt="Instructor" width="40" height="40" class="rounded-circle me-3">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">Class Rescheduled</h6>
+                                                <small class="text-muted">1 day ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Next week's photography class moved to...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm rounded">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                                 alt="Instructor" width="40" height="40" class="rounded-circle me-3">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-1">New Course Material</h6>
+                                                <small class="text-muted">3 days ago</small>
+                                            </div>
+                                            <p class="mb-0 text-muted">Additional resources for graphic design...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Toggle sidebar on mobile
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('main-content').classList.toggle('active');
+        });
+
+        // Initialize chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('progressChart').getContext('2d');
+            const progressChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Programming', 'Graphics Design', 'Photography'],
+                    datasets: [{
+                        label: 'Course Progress (%)',
+                        data: [65, 100, 30],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(255, 206, 86, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '% complete';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
