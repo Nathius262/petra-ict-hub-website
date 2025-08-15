@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Petra ICT Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header text-center">
+            <h4>Petra ICT Hub</h4>
+            <p class="mb-0 text-light">Admin Dashboard</p>
+        </div>
+        <div class="text-center py-3">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                 alt="Admin" class="rounded-circle profile-img border border-3 border-white" width="100">
+            <h5 class="mt-3 mb-0">Admin User</h5>
+            <small class="text-light">Super Administrator</small>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-users"></i> User Management <span class="badge bg-danger float-end mt-1">3</span></a>
+                <ul class="submenu">
+                    <li><a href="#">All Users</a></li>
+                    <li><a href="#">Admins</a></li>
+                    <li><a href="#">Instructors</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Add New User</a></li>
+                </ul>
+            </li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-book"></i> Courses</a>
+                <ul class="submenu">
+                    <li><a href="#">All Courses</a></li>
+                    <li><a href="#">Add New Course</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Enrollments</a></li>
+                </ul>
+            </li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-calendar-alt"></i> Scheduling</a>
+                <ul class="submenu">
+                    <li><a href="#">Class Schedule</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Batch Management</a></li>
+                </ul>
+            </li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-tasks"></i> Assignments</a>
+                <ul class="submenu">
+                    <li><a href="#">All Assignments</a></li>
+                    <li><a href="#">Create Assignment</a></li>
+                    <li><a href="#">Submissions</a></li>
+                    <li><a href="#">Grading</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#"><i class="fas fa-file-certificate"></i> Certificates</a></li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
+                <ul class="submenu">
+                    <li><a href="#">Enrollment Stats</a></li>
+                    <li><a href="#">Revenue</a></li>
+                    <li><a href="#">Student Progress</a></li>
+                    <li><a href="#">Course Completion</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#"><i class="fas fa-comments"></i> Messages <span class="badge bg-primary float-end mt-1">12</span></a></li>
+            
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <ul class="submenu">
+                    <li><a href="#">System Settings</a></li>
+                    <li><a href="#">Payment Settings</a></li>
+                    <li><a href="#">Email Templates</a></li>
+                    <li><a href="#">Backup</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Top Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded mb-4">
+            <div class="container-fluid">
+                <button class="btn btn-primary me-2 d-lg-none" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="d-flex align-items-center">
+                    <h5 class="mb-0 text-light">Dashboard</h5>
+                </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-light" type="button" id="notificationDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">New assignment posted</a></li>
+                            <li><a class="dropdown-item" href="#">Course update available</a></li>
+                            <li><a class="dropdown-item" href="#">Upcoming class reminder</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-primary" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-decoration-none" id="userDropdown" data-bs-toggle="dropdown">
+                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="User" width="40" height="40" class="rounded-circle me-2">
+                            
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="container-fluid">
+            <!-- Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card admin-card card-primary">
+                        <div class="card-body">
+                            <i class="fas fa-users card-icon"></i>
+                            <h6 class="text-uppercase text-white-50">Total Students</h6>
+                            <h2 class="mb-0">248</h2>
+                            <div class="progress progress-thin mt-3">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white-50">
+                            <i class="fas fa-arrow-up me-1"></i> 12% increase this month
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card admin-card card-success">
+                        <div class="card-body">
+                            <i class="fas fa-book card-icon"></i>
+                            <h6 class="text-uppercase text-white-50">Active Courses</h6>
+                            <h2 class="mb-0">14</h2>
+                            <div class="progress progress-thin mt-3">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white-50">
+                            <i class="fas fa-arrow-up me-1"></i> 3 new courses this quarter
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card admin-card card-warning">
+                        <div class="card-body">
+                            <i class="fas fa-money-bill-wave card-icon"></i>
+                            <h6 class="text-uppercase">Monthly Revenue</h6>
+                            <h2 class="mb-0">₦1,245,000</h2>
+                            <div class="progress progress-thin mt-3 bg-white bg-opacity-25">
+                                <div class="progress-bar bg-dark" role="progressbar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <i class="fas fa-arrow-up me-1"></i> 22% increase from last month
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card admin-card card-danger">
+                        <div class="card-body">
+                            <i class="fas fa-tasks card-icon"></i>
+                            <h6 class="text-uppercase text-white-50">Pending Tasks</h6>
+                            <h2 class="mb-0">18</h2>
+                            <div class="progress progress-thin mt-3">
+                                <div class="progress-bar bg-white" role="progressbar" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white-50">
+                            <i class="fas fa-arrow-down me-1"></i> 5 completed today
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="card admin-card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Enrollment Statistics</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="enrollmentChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card admin-card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Course Popularity</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="courseChart" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Students & Upcoming Classes -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="card admin-card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Recent Students</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Course</th>
+                                            <th>Joined</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                                                         width="40" height="40" class="rounded-circle me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Sarah Johnson</h6>
+                                                        <small class="text-muted">sarah@example.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Programming</td>
+                                            <td>Today</td>
+                                            <td><span class="status-badge badge-active">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                                         width="40" height="40" class="rounded-circle me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Michael Adebayo</h6>
+                                                        <small class="text-muted">michael@example.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Graphics Design</td>
+                                            <td>2 days ago</td>
+                                            <td><span class="status-badge badge-active">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                                         width="40" height="40" class="rounded-circle me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">Amina Mohammed</h6>
+                                                        <small class="text-muted">amina@example.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Photography</td>
+                                            <td>1 week ago</td>
+                                            <td><span class="status-badge badge-active">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                                         width="40" height="40" class="rounded-circle me-3">
+                                                    <div>
+                                                        <h6 class="mb-0">David Okonkwo</h6>
+                                                        <small class="text-muted">david@example.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Digital Marketing</td>
+                                            <td>2 weeks ago</td>
+                                            <td><span class="status-badge badge-inactive">Inactive</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card admin-card h-100">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Upcoming Classes</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Calendar</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Programming Fundamentals</h6>
+                                            <small class="text-muted">Web Development Module</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Tomorrow</small>
+                                            <div class="fw-bold">10:00 AM - 12:00 PM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Photography Basics</h6>
+                                            <small class="text-muted">Outdoor Practical Session</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Fri, Jul 28</small>
+                                            <div class="fw-bold">2:00 PM - 4:00 PM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm mb-2 rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Graphics Design</h6>
+                                            <small class="text-muted">Adobe Illustrator Workshop</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Mon, Jul 31</small>
+                                            <div class="fw-bold">9:00 AM - 11:00 AM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action border-0 shadow-sm rounded">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Digital Marketing</h6>
+                                            <small class="text-muted">Social Media Strategies</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <small class="text-muted">Wed, Aug 2</small>
+                                            <div class="fw-bold">1:00 PM - 3:00 PM</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Payments & Quick Actions -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card admin-card">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Recent Payments</h5>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Transaction ID</th>
+                                            <th>Student</th>
+                                            <th>Course</th>
+                                            <th>Amount</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#TRX-7845</td>
+                                            <td>Sarah Johnson</td>
+                                            <td>Programming</td>
+                                            <td>₦45,000</td>
+                                            <td>Jul 24, 2023</td>
+                                            <td><span class="status-badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TRX-7844</td>
+                                            <td>Michael Adebayo</td>
+                                            <td>Graphics Design</td>
+                                            <td>₦35,000</td>
+                                            <td>Jul 23, 2023</td>
+                                            <td><span class="status-badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TRX-7843</td>
+                                            <td>Amina Mohammed</td>
+                                            <td>Photography</td>
+                                            <td>₦30,000</td>
+                                            <td>Jul 22, 2023</td>
+                                            <td><span class="status-badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TRX-7842</td>
+                                            <td>David Okonkwo</td>
+                                            <td>Digital Marketing</td>
+                                            <td>₦25,000</td>
+                                            <td>Jul 21, 2023</td>
+                                            <td><span class="status-badge badge-pending">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#TRX-7841</td>
+                                            <td>Grace Okafor</td>
+                                            <td>Computer Basics</td>
+                                            <td>₦20,000</td>
+                                            <td>Jul 20, 2023</td>
+                                            <td><span class="status-badge badge-success">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card admin-card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Quick Actions</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-3">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-user-plus me-2"></i> Add New Student
+                                </button>
+                                <button class="btn btn-success">
+                                    <i class="fas fa-book me-2"></i> Create New Course
+                                </button>
+                                <button class="btn btn-info">
+                                    <i class="fas fa-calendar-plus me-2"></i> Schedule Class
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-tasks me-2"></i> Create Assignment
+                                </button>
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-envelope me-2"></i> Send Announcement
+                                </button>
+                                <button class="btn btn-dark">
+                                    <i class="fas fa-file-invoice-dollar me-2"></i> Generate Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Toggle sidebar on mobile
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('main-content').classList.toggle('active');
+        });
+
+        // Toggle submenus
+        document.querySelectorAll('.has-submenu > a').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const submenu = this.parentElement.querySelector('.submenu');
+                this.parentElement.classList.toggle('active');
+                submenu.classList.toggle('show');
+            });
+        });
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enrollment Chart
+            const enrollmentCtx = document.getElementById('enrollmentChart').getContext('2d');
+            const enrollmentChart = new Chart(enrollmentCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    datasets: [{
+                        label: 'New Students',
+                        data: [15, 22, 18, 25, 30, 28, 35],
+                        backgroundColor: 'rgba(16, 83, 65, 0.2)',
+                        borderColor: 'rgba(16, 83, 65, 1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'Total Enrollments',
+                        data: [120, 142, 160, 185, 215, 243, 278],
+                        backgroundColor: 'rgba(222, 254, 171, 0.2)',
+                        borderColor: 'rgba(222, 254, 171, 1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Course Popularity Chart
+            const courseCtx = document.getElementById('courseChart').getContext('2d');
+            const courseChart = new Chart(courseCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Programming', 'Graphics Design', 'Photography', 'Digital Marketing', 'Computer Basics'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            'rgba(16, 83, 65, 0.8)',
+                            'rgba(40, 167, 69, 0.8)',
+                            'rgba(255, 193, 7, 0.8)',
+                            'rgba(23, 162, 184, 0.8)',
+                            'rgba(108, 117, 125, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.raw + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
